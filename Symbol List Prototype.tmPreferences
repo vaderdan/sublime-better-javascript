@@ -11,7 +11,11 @@
 		<key>showInSymbolList</key>
 		<string>1</string>
 		<key>symbolTransformation</key>
-		<string>s/([a-zA-Z_?.$][\w?.$]*)\s*=.*/\1/g</string>
+		<string>
+			s/([a-zA-Z_?.$][\w?.$]*)\s*=.*/\1/g
+			s/([^\.]*\.)*//g #remove prototype prefix
+			s/\=[\s\t ]*function//g #remove function + sufixes
+		</string>
 	</dict>
 	<key>uuid</key>
 	<string>37FCDC90-EE7C-11E2-91E2-0800200C9A66</string>
